@@ -1,0 +1,10 @@
+{
+    "success": false,
+    "error": {
+        "name": "AUTHENTICATION_FAILED",
+        "code": "CIA_101",
+        "message": "Session Expired. Please login again",
+        "resolutionMessage": "Invalid token",
+        "data": null
+    }
+}
