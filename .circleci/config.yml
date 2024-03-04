@@ -9,8 +9,12 @@ jobs:
       - checkout
       - run:
           shell: /bin/bash
+          name: Install dependencies
+          command : mvn clean install -DskipTests=true
+      - run:
+          shell: /bin/bash
           name: Run maven command
-          command: mvn verify
+          command: mvn test
       - run:
           shell: /bin/bash
           name: Run allure-reports command
