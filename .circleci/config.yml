@@ -11,10 +11,14 @@ jobs:
           shell: /bin/bash
           name: Run maven command
           command: mvn verify
+      - run:
+          shell: /bin/bash
+          name: Run allure-reports command
+          command: allure generate
       - store_test_results:
           path: target/surefire-reports
       - store_artifacts:
-          path: /home/circleci/project/allure-results
+          path: /home/circleci/project/allure-report
           destination: artifact-file
 workflows:
   build-and-test:
