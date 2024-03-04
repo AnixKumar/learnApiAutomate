@@ -13,6 +13,9 @@ jobs:
           command: mvn verify
       - store_test_results:
           path: target/surefire-reports
+      - store_artifacts:
+          path: /home/circleci/project/allure-results/*attachment.txt
+          destination: artifact-file
 workflows:
   build-and-test:
     jobs:
