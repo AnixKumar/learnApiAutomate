@@ -8,9 +8,11 @@ jobs:
     steps:
       - checkout
       - run:
-          shell: /bin/bash
-          name: Install dependencies
-          command : mvn clean install -DskipTests=true
+          name: Install Allure CLI
+          command: |
+            sudo apt-add-repository ppa:qameta/allure
+            sudo apt-get update
+            sudo apt-get install allure
       - run:
           shell: /bin/bash
           name: Run maven command
