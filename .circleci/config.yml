@@ -14,7 +14,7 @@ jobs:
       - store_test_results:
           path: target/surefire-reports
       - store_artifacts:
-          path: /home/circleci/project/allure-results/*attachment.txt
+          path: /home/circleci/project/allure-results
           destination: artifact-file
 workflows:
   build-and-test:
